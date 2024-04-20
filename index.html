@@ -24,7 +24,7 @@
     <div class="text-center mb-5">
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
-    <!-- Todo: Create a modal with a form to add tasks -->
+    <!--Create a modal with a form to add tasks -->
     <div class="modal" id="formModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -37,19 +37,19 @@
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="task">Task:</label>
-                  <input type="text" class="form-control" id="task">
+                  <input type="text" class="form-control" id="task" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="taskDueDate">Task Due Date:</label>
-                  <input type="date" class="form-control" id="taskDueDate">
+                  <input type="date" class="form-control" id="taskDueDate" required>
                 </div>
                 <div class="form-group">
                   <label for="taskDescription">Task Description:</label>
-                  <textarea class="form-control" id="taskDescription"></textarea>
+                  <textarea class="form-control" spellcheck="true" contenteditable="true" id="taskDescription" required></textarea>
                 </div>
               </div>
             </form>
-            <div class="container text-center mt-3">
+            <div class="row text-center mt-3">
               <div class="row justify-content-center">
                 <div class="col-3">
                   <button type="button" class="bg-success bg-opacity-75 text-white" id="addTaskInForm">Add Task</button>
@@ -57,10 +57,8 @@
               </div>
             </div>
           </div>
-          
         </div>
       </div>
-      
     </div>
     
     <div class="row swim-lanes text-center justify-content-between">
@@ -69,7 +67,7 @@
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">To Do</h2>
           </div>
-          <div class="card-body bg-light">
+          <div class="card-body bg-light droppable" data-phase="toDo">
             <div id="todo-cards"></div>
           </div>
         </div>
@@ -79,7 +77,7 @@
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">In Progress</h2>
           </div>
-          <div class="card-body bg-light">
+          <div class="card-body bg-light droppable" data-phase="inProgress">
             <div id="in-progress-cards"></div>
           </div>
         </div>
@@ -89,7 +87,7 @@
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">Done</h2>
           </div>
-          <div class="card-body bg-light">
+          <div class="card-body bg-light droppable" data-phase="done">
             <div id="done-cards"></div>
           </div>
         </div>
