@@ -133,22 +133,12 @@ function renderTaskList() {
   }
 }
 
-// Create a function to handle adding a new task
-function handleAddTask(event){
-  // did this with an arrow funciton
-}
-
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event){
   if ($(event.target).hasClass('delete')) {
     // Find the value in which phase the task id exists and delete it from the taskboard object
     removeTaskAndDisplay($(event.target).data('project-id'));
   }
-}
-
-// Todo: create a function to handle dropping a task into a new status lane
-function handleDrop(event, ui) {
-  // did this with an arrow function
 }
 
 // Remove a task
